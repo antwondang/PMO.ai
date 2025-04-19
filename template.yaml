@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  PredictFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: python3.12
+      Handler: main.handler
+      Environment:
+        Variables:
+          AWS_REGION: !Ref AWS::Region
